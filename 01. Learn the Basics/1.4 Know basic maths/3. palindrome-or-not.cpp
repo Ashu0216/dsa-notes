@@ -19,4 +19,16 @@ bool palindrome(int n) {
     }
 }
 
+/*
+╭──────────────────────────────────────────────────────────────╮
+│                      Complexity                              │
+├──────────────────────────────────────────────────────────────┤
+│  Time  : O(log₁₀ N)                                          │
+│  Space : O(1)                                                │
+│--------------------------------------------------------------│
+│  Notes : One pass over digits                                │
+│          Number of iterations = number of digits             │
+╰──────────────────────────────────────────────────────────────╯
+*/
+
 //Link: https://leetcode.com/problems/palindrome-number/description/

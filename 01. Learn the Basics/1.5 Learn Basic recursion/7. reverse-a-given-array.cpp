@@ -1,25 +1,40 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution {
+// Two-pointer approach
+class SolutionTwoPointer {
 public:
     void reverseArray(vector<int>& arr) {
-        int p1 = 0;
-        int p2 = arr.size() - 1;
+        int left = 0;
+        int right = arr.size() - 1;
 
-        while (p1 < p2) {
-            swap(arr[p1], arr[p2]);
-            p1++;
-            p2--;
+        while (left < right) {
+            swap(arr[left++], arr[right--]);
         }
     }
 };
 
-//Use STL reverse to reverse array in-place
-class Solution {
+// STL approach
+class SolutionSTL {
 public:
     void reverseArray(vector<int>& arr) {
-        
         reverse(arr.begin(), arr.end());
     }
 };
+
+/*
+╭─────────────────────────────────────────────────────────────╮
+│                         Complexity                          │
+├─────────────────────────────────────────────────────────────┤
+│  Two-Pointer                                                │
+│  Time  : O(N)                                               │
+│  Space : O(1)                                               │
+│-------------------------------------------------------------│
+│  STL reverse()                                              │
+│  Time  : O(N)                                               │
+│  Space : O(1)                                               │
+│-------------------------------------------------------------│
+│  Notes : Both reverse in-place                              │
+│          STL internally uses similar logic                  │
+╰─────────────────────────────────────────────────────────────╯
+*/

@@ -2,33 +2,52 @@
 using namespace std;
 
 // Brute Force
-int main() {
-    int a = 12, b = 16;
+int gcdBrute(int a, int b) {
     int res = min(a, b);
-    while (res > 1) {
+
+    while (res > 0) {
         if (a % res == 0 && b % res == 0)
-            break;
+            return res;
         res--;
     }
-    cout <<res;
-    return 0;
+
+    return 1;
 }
 
 // Euclidean Algorithm
-int gcd(int a, int b) {
-    if (a == 0)
-        return b;
-    if (b == 0)
-        return a;
-    if (a == b)
-        return a;
+int gcd(int a, int b)
+{
+    if (b == 0) return a;
+    if (a == 0) return b;
+    
     if (a > b)
         return gcd(a - b, b);
-
-    return gcd(a, b - a);
+    else
+        return gcd(a, b - a);
 }
 
-//shorter Euclidean Algorithm
-int gcd(int a, int b) {
+// Optimized Euclidean Algorithm (Modulo based)
+int gcd(int a, int b)
+{
     return b == 0 ? a : gcd(b, a % b);
 }
+
+/*
+╭─────────────────────────────────────────────────────────────╮
+│                      Complexity                             │
+├─────────────────────────────────────────────────────────────┤
+│  Brute Force                                                │
+│  Time  : O(min(a, b))                                       │
+│  Space : O(1)                                               │
+│-------------------------------------------------------------│
+│  Subtraction Method                                         │
+│  Time  : O(max(a, b)) (worst case)                          │
+│  Space : O(max(a, b)) recursion depth                       │
+│-------------------------------------------------------------│
+│  Modulo Method (Optimal)                                    │
+│  Time  : O(log(min(a, b)))                                  │
+│  Space : O(log(min(a, b))) recursion depth                  │
+│-------------------------------------------------------------│
+│  Notes : Modulo-based Euclidean algorithm is optimal        │
+╰─────────────────────────────────────────────────────────────╯
+*/

@@ -1,30 +1,31 @@
-
 #include <iostream>
-#include <vector>
-#include <algorithm>
 using namespace std;
 
-
-// Function to count the number
-// of digits in an integer 'n'.
-int countDigits(int n){
-    // Initialize a counter variable
-    // 'cnt' to store the count of digits.
+int countDigits(int n) {
     int cnt = 0;
-    // While loop iterates until 'n'
-    // becomes 0 (no more digits left).
-    while(n > 0){
-        // Increment the counter
-        // for each digit encountered.
-        cnt = cnt + 1;
-        // Divide 'n' by 10 to
-        // remove the last digit.
-        n = n / 10;
+
+    // Handle negative numbers
+    n = abs(n);
+
+    // Special case: 0 has 1 digit
+    if (n == 0) return 1;
+
+    while (n > 0) {
+        cnt++;
+        n /= 10;
     }
-    // Return the
-    // count of digits.
+
     return cnt;
 }
 
-
-                                
+/*
+╭──────────────────────────────────────────────────────────────╮
+│                      Complexity                              │
+├──────────────────────────────────────────────────────────────┤
+│  Time  : O(log₁₀ N)                                          │
+│  Space : O(1)                                                │
+│--------------------------------------------------------------│
+│  Notes : Number of iterations equals number of digits        │
+│          (division by 10 each step)                          │
+╰──────────────────────────────────────────────────────────────╯
+*/

@@ -13,10 +13,21 @@ bool isPalindromeRec(string& s, int left, int right) {
     if (s[left] != s[right]) 
         return false;
 
-    // Recursive call with narrowed range
     return isPalindromeRec(s, left + 1, right - 1);
 }
 
 bool isPalindrome(string& s) {
     return isPalindromeRec(s, 0, s.size() - 1);
 }
+
+/*
+╭─────────────────────────────────────────────────────────────╮
+│                         Complexity                          │
+├─────────────────────────────────────────────────────────────┤
+│  Time  : O(N)                                               │
+│  Space : O(N)                                               │
+│-------------------------------------------------------------│
+│  Notes : N recursive calls in worst case                    │
+│          Space due to recursion stack                       │
+╰─────────────────────────────────────────────────────────────╯
+*/

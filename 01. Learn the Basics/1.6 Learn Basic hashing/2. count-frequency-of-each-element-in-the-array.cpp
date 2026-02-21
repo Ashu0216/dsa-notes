@@ -1,15 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void Frequency(int arr[], int n) {
+void frequency(int arr[], int n) {
+    unordered_map<int, int> freq;
 
-    unordered_map<int, int> map;
+    for (int i = 0; i < n; i++)
+        freq[arr[i]]++;
 
-    for (int i = 0; i < n; i++) {
-        map[arr[i]]++;
-    }
-
-    for (auto x : map) {
-        cout << x.first << " " << x.second << endl;
-    }
+    for (const auto& p : freq)
+        cout << p.first << " " << p.second << "\n";
 }
+
+/*
+╭──────────────────────────────────────────────────────────────╮
+│                         Complexity                           │
+├──────────────────────────────────────────────────────────────┤
+│  Time  : O(N)  (average case)                                │
+│  Space : O(N)                                                │
+│--------------------------------------------------------------│
+│  Notes : Unordered_map operations are O(1) average           │
+│          Worst case can degrade to O(N^2)                    │
+╰──────────────────────────────────────────────────────────────╯
+*/

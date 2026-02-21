@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// forward recusrion
+// Forward Recursion: 1 → n
 class Solution {
 public:
     void printNumbers(int current, int n) {
@@ -18,7 +18,7 @@ public:
 };
 
 
-// backtracking recursion
+// Backtracking Recursion: n → 1
 class Solution {
 public:
     void printNumbers(int current, int n) {
@@ -33,3 +33,17 @@ public:
         cout << current << " ";
     }
 };
+
+/*
+╭─────────────────────────────────────────────────────────────╮
+│                      Complexity                             │
+├─────────────────────────────────────────────────────────────┤
+│  Time  : O(N)                                               │
+│  Space : O(N)                                               │
+│-------------------------------------------------------------│
+│  Notes : N recursive calls                                  │
+│          Space due to recursion stack                       │
+│          Forward prints during descent                      │
+│          Backward prints during backtracking                │
+╰─────────────────────────────────────────────────────────────╯
+*/

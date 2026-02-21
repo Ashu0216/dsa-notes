@@ -29,6 +29,21 @@ void bubbleSort(int arr[], int n)
 }
 
 /*
+╭──────────────────────────────────────────────────────────────╮
+│                         Complexity                           │
+├──────────────────────────────────────────────────────────────┤
+│  Best   : O(N)                                               │
+│  Average: O(N^2)                                             │
+│  Worst  : O(N^2)                                             │
+│  Space  : O(N)                                               │ 
+│--------------------------------------------------------------│
+│  Notes  : Stable sorting algorithm                           │
+│           Recursive implementation                           │
+│           O(N) stack space due to recursion                  │
+╰──────────────────────────────────────────────────────────────╯
+*/
+
+/*
 1. Base Case: If array size is 1, return.
 2. Do One Pass of normal Bubble Sort. This pass fixes last element of current subarray.
 3. Recur for all elements except last of current subarray.

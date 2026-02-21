@@ -22,6 +22,21 @@ void bubbleSort(vector<int>& arr) {
 }
 
 /*
+╭──────────────────────────────────────────────────────────────╮
+│                         Complexity                           │
+├──────────────────────────────────────────────────────────────┤
+│  Best   : O(N)                                               │
+│  Average: O(N^2)                                             │
+│  Worst  : O(N^2)                                             │
+│  Space  : O(1)                                               │
+│--------------------------------------------------------------│
+│  Notes  : Stable sorting algorithm                           │
+│           In-place                                           │
+│           Optimized with early break (swapped flag)          │
+╰──────────────────────────────────────────────────────────────╯
+*/
+
+/*
 Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. This algorithm is not efficient for large data sets as its average and worst-case time complexity are quite high.
 
 1. Sorts the array using multiple passes. After the first pass, the maximum goes to end (its correct position). Same way, after second pass, the second largest goes to second last position and so on.

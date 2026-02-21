@@ -33,3 +33,16 @@ public:
         cout << "The lowest frequency element is: " << minEle << "\n";
     }
 };
+
+/*
+╭──────────────────────────────────────────────────────────────╮
+│                         Complexity                           │
+├──────────────────────────────────────────────────────────────┤
+│  Time  : O(N)  (average case)                                │
+│  Space : O(N)                                                │
+│--------------------------------------------------------------│
+│  Notes : Two passes — build map and scan map                 │
+│          Unordered_map is O(1) average per operation         │
+│          Worst case can degrade to O(N^2)                    │
+╰──────────────────────────────────────────────────────────────╯
+*/

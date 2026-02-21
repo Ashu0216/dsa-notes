@@ -30,6 +30,21 @@ void insertionSortRecursive(int arr[], int n)
 }
 
 /*
+╭──────────────────────────────────────────────────────────────╮
+│                         Complexity                           │
+├──────────────────────────────────────────────────────────────┤
+│  Best   : O(N)                                               │
+│  Average: O(N^2)                                             │
+│  Worst  : O(N^2)                                             │
+│  Space  : O(N)                                               │
+│--------------------------------------------------------------│
+│  Notes  : Stable sorting algorithm                           │
+│           Recursive implementation                           │
+│           O(N) stack space due to recursion                  │
+╰──────────────────────────────────────────────────────────────╯
+*/
+
+/*
 Base Case: If array size is 1 or smaller, return.
 Recursively sort first n-1 elements.
 Insert last element at its correct position in sorted array.

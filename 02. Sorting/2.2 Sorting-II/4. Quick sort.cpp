@@ -61,6 +61,21 @@ int main()
 }
 
 /*
+╭──────────────────────────────────────────────────────────────╮
+│                         Complexity                           │
+├──────────────────────────────────────────────────────────────┤
+│  Best   : O(N log N)                                         │
+│  Average: O(N log N)                                         │
+│  Worst  : O(N^2)                                             │
+│  Space  : O(log N)  (average recursion stack)                │
+│--------------------------------------------------------------│
+│  Notes  : Not stable                                         │
+│           In-place (no extra array)                          │
+│           Worst case when pivot is smallest/largest          │
+╰──────────────────────────────────────────────────────────────╯
+*/
+
+/*
 QuickSort is a sorting algorithm based on the Divide and Conquer that picks an element as a pivot and partitions the given array around the picked pivot by placing the pivot in its correct position in the sorted array. .
 
 There are mainly three steps in the algorithm:

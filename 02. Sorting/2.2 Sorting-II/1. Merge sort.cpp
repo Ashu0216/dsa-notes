@@ -81,6 +81,20 @@ int main(){
     return 0;
 }
 
+/*
+╭──────────────────────────────────────────────────────────────╮
+│                         Complexity                           │
+├──────────────────────────────────────────────────────────────┤
+│  Best   : O(N log N)                                         │
+│  Average: O(N log N)                                         │
+│  Worst  : O(N log N)                                         │
+│  Space  : O(N)                                               │
+│--------------------------------------------------------------│
+│  Notes  : Stable sorting algorithm                           │
+│           Not in-place (uses auxiliary arrays)               │
+│           Divide and Conquer approach                        │
+╰──────────────────────────────────────────────────────────────╯
+*/
 
 /*Merge sort is a popular sorting algorithm known for its efficiency and stability. It follows the Divide and Conquer approach. It works by recursively dividing the input array into two halves, recursively sorting the two halves and finally merging them back together to obtain the sorted array.
 

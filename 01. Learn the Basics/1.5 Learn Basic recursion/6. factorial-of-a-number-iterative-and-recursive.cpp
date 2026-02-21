@@ -10,11 +10,10 @@ int factorial(int X) {
         ans = ans * i;
     }
 
-    // Return the final result
     return ans;
 }
 
-// Recursive function to calculate factorial of a number
+// Recursive 
 int factorial(int n) {
     // Base case: factorial of 0 is 1
     if (n == 0) {
@@ -24,3 +23,20 @@ int factorial(int n) {
     // Recursive case: n * factorial of (n-1)
     return n * factorial(n - 1);
 }
+
+/*
+╭─────────────────────────────────────────────────────────────╮
+│                         Complexity                          │
+├─────────────────────────────────────────────────────────────┤
+│  Iterative                                                  │
+│  Time  : O(N)                                               │
+│  Space : O(1)                                               │
+│-------------------------------------------------------------│
+│  Recursive                                                  │
+│  Time  : O(N)                                               │
+│  Space : O(N)                                               │
+│-------------------------------------------------------------│
+│  Notes : Recursive uses call stack                          │
+│          Iterative is preferred in interviews               │
+╰─────────────────────────────────────────────────────────────╯
+*/
