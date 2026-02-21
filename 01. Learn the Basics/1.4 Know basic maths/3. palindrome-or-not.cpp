@@ -2,8 +2,8 @@
 using namespace std;
 
 bool palindrome(int n) {
-    int revNum = 0; // Initialize a variable to store the reverse of the number
-    int dup = n; // Create a duplicate variable to store the original number
+    int revNum = 0; 
+    int dup = n; 
 
     while (n > 0) {
         int ld = n % 10; 
