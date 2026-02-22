@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> leaders(vector<int>& nums) {
+        vector<int> ans;
+        
+        if(nums.empty()) {
+            return ans;
+        }
+        
+        // Last element of the vector is always a leader
+        int max = nums[nums.size() - 1];
+        ans.push_back(nums[nums.size() - 1]);
+        
+        // Check elements from right to left
+        for (int i = nums.size() - 2; i >= 0; i--) {
+            if (nums[i] > max) {
+                ans.push_back(nums[i]);
+                max = nums[i];
+            }
+        }
+        
+        /* Reverse the vector to match
+        the required output order*/
+        reverse(ans.begin(), ans.end());
+        
+        return ans;
+    }
+};
+
+/*
+╭──────────────────────────────────────────────────────────────╮
+│              Complexity                                      │
+├──────────────────────────────────────────────────────────────┤
+│  Time  : O(N)                                                │
+│  Space : O(1)                                                │
+│--------------------------------------------------------------│
+│  Notes  : We traverse the entire original array only once    │
+│           No extra data structure                            │
+╰──────────────────────────────────────────────────────────────╯
+*/
