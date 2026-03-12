@@ -42,5 +42,18 @@ public:
 │          Log factor appears if bit counting is explicit      │
 ╰──────────────────────────────────────────────────────────────╯
 */
+/*
+Example 1:
 
-// Link : https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation/submissions/1926659286/?source=submission-ac
+Input: left = 6, right = 10
+Output: 4
+Explanation:
+6  -> 110 (2 set bits, 2 is prime)
+7  -> 111 (3 set bits, 3 is prime)
+8  -> 1000 (1 set bit, 1 is not prime)
+9  -> 1001 (2 set bits, 2 is prime)
+10 -> 1010 (2 set bits, 2 is prime)
+4 numbers have a prime number of set bits.
+*/
+
+// Link : https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation
